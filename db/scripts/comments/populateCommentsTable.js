@@ -9,7 +9,7 @@ async function populateCommentsTable() {
     const comment = comments[i].comment;
 
     const res = await query(
-      `INSERT INTO comments (first_name, second_name, job_title, comment) VALUES ($1, $2, $3, $4)`,
+      `INSERT INTO comments (first_name, last_name, job_title, comment) VALUES ($1, $2, $3, $4)`,
       [firstName, lastName, jobTitle, comment]
     );
     console.log('comments table populated', res);
